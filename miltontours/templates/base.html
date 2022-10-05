@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="TAIWAN CUISINE ORDER">
+    
+    <!-- Bootstrap Required Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Chuang & Howard's CUISINE</title>
+
+     
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="index.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Contains all the CSS definitions related to the elements in this page. -->
+
+    <style>
+        /* This is how you leave a comment in the stylesheet section of the document. */
+
+        /*Affects the whole document */
+        html,
+        body {
+            margin: 0;
+
+            font-family: Arial, Helvetica, sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+            /* Sets the font styles for the page. These are web safe fonts. */
+        }
+
+        /*To wrap the content of the whole page. */
+        #wrapper {
+            margin: auto;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* Affects the element with the id navigationbar. */
+        #navigationbar {
+            clear: both;
+            height: 50px;
+            background-color: green;
+        }
+
+        /* This is to style the page heading. */
+        #companyname {
+            margin: 0;
+            float: left;
+            padding: 5px;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        /* This is to remove the underline from the page heading because it's a link. */
+        #companyname a {
+            color: white;
+            text-decoration: none;
+        }
+    
+        /* NAVIGATION CSS BEGIN */
+        
+        /* This is to style the element that holds all the menu items. */
+        nav {
+            float: right;
+        }
+
+        /* This will only affect the <ul> element within the nav element. */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        /* This will only affect the <li> item in the <ul> element under the nav element. */
+        nav ul li {
+            color: #fff;
+            display: block;
+            float: left;
+            padding: 1rem;
+            border-right: 1px solid #bbb;
+            /* rem - Relative to font-size of the root element */
+            position: relative;
+            text-decoration: none;
+            transition-duration: 0.5s;
+        }
+
+        /* This will only affect the <a> tags within <li> items in the <ul> element under the nav element. */
+        nav ul li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+        
+        /* Hover properties of list items */
+        nav ul li:hover,
+        nav ul li:focus-within {
+            background-color: lightblue;
+            cursor: pointer;
+        }
+
+        /* Link properties of a menu item in focus */
+        nav ul li:focus-within a {
+            outline: none;
+        }
+
+        /*This affects sub menu under a main menu item */
+        nav ul li ul {
+            background-color: violet;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            white-space: nowrap;
+        }
+
+        /* Hover properties of list items in sub menus */
+        nav ul li:hover>ul,
+        nav ul li:focus-within>ul,
+        nav ul li ul:hover,
+        nav ul li ul:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+
+        /*This affects list items of a sub menu under a main menu item */
+        nav ul li ul li {
+            background-color: violet;
+            width: 100%;
+            display: inline-block;
+        }
+
+        /* This will only affect the LAST <li> item in the <ul> element under the nav element. */
+        nav li:last-child {
+            border-right: none;
+        }
+
+        /* Changes the colour of the active menu element. Thsi has to be set dynamically and cannot be done with CSS alone. */
+        nav .active {
+            background-color: green;
+        }
+
+        /* NAVIGATION CSS END */
+
+        /* Place text in the middle of the image */
+        .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        }
+
+
+        .Menu {
+            text-align: justify;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    
+
+        /* Styles the footer for the website. Uses CSS Flexbox. */
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        #linksource {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #C0C0C0;
+            color: black;
+        }
+
+        /* cart -> counter,btn,price*/
+        .counter{
+            width: 15%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+       
+        .center {
+        margin-left: auto;
+        margin-right: auto;
+        }
+        
+        #contactsend
+        {
+            background-color: rgb(170, 170, 255);
+        }
+
+        .clickmegotomenu
+        {
+            text-align: center;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <!-- putting header inside container will prevent full width navbar -->
+
+    <header>
+
+        <!--navbar creates a navigation bar -->
+        <!-- Colours https://getbootstrap.com/docs/4.0/utilities/colors/ -->
+
+        <div id="navigationbar">
+            <div id="companyname">
+                <a href="{{url_for('main.index')}}">Chuang & Howard's CUISINE</a>
+            </div>
+            <nav id="navigationmenu">
+                <ul id="navigationlist">
+                    <li class="active">
+                        <a href="{{url_for('main.index')}}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('main.order')}}">Basket</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('main.index')}}">Contact Us</a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-primary" role="alert">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %} 
+
+        {% block head %}{% endblock %}
+
+    </header>
+
+
+    <!-- main page content goes in container -->
+    <div class="container-fluid">
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>Chuang & Howard's CUISINE &copy; Made by CHIH-YU CHUANG N10952535 & HOWARD RHODES N11266198</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

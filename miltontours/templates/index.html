@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!-- Jumbotron-->
+<div class="jumbotron jumbotron-fluid card card-image"
+style="width:1900px;height:400px; background-image: url({{url_for('static', filename='img/taipei.jpg')}})";></div>
+    <div class="row justify-content-center mt-5 pb-4">
+        <div class="col-md-8">
+            <div class="jumbotron shadow py-4 mb-5 ">
+                <h1 class="display-3">Welcome to Chuang & Howard's Cuisine!</h1>
+                <p class="lead">The worlds cheapest Taiwanese food!</p>
+                <hr class="my-2">
+                <p>Delivery, dine-in or pickup!</p>
+            </div>
+
+{% endblock %}
+
+{% block main %}
+
+
+
+<!-- Display food -->
+<section>
+    <div class="text-dark text-center">
+        <div>
+            <p class="h3 text-dark mb-4" id="foods_anchor">Explore our categories!</p>
+        </div>
+    </div>
+    <div class="card-deck row">
+        
+            {% for category in categorys%}
+            <div class="card col">
+                <img class="card-img-top" src="{{url_for('static', filename='img/'+category.image)}}" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">{{category.name}}</h4>
+                    <p class="card-text">{{category.description}}</p>
+                </div>
+                <div class="card-footer"><a href= "{{ url_for('main.categoryfoods', categoryid=category.id) }}" class="btn btn-primary">Order now!</a></div>
+            </div>
+            {% endfor %}
+       
+    </div>
+</section>
+{% endblock %}
